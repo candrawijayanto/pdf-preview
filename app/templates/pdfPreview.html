@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="static/components/others/PdfPreview.css">
+    <link rel="stylesheet" href="static/plugin/pdf2htmlEX/base.min.css">
+    <link rel="stylesheet" href="static/plugin/pdf2htmlEX/fancy.min.css">
+
+    <script src="static/plugin/pdf2htmlEX/compatibility.min.js"></script>
+    <script src="static/plugin/pdf2htmlEX/pdf2htmlEX.js"></script>
+    <script src="static/components/others/PdfPreview.js"></script>
+</head>
+
+<body>
+    <p>PDF Preview</p>
+    <button>Show PDF</button>
+</body>
+
+<script>
+    const pdfPreview = new PdfPreview();
+    pdfPreview.setPdfFile("/pdf/test.pdf", "/pdf/test.pdf?as_html=0");
+
+    document.querySelector('button').onclick = e => { pdfPreview.show(); };
+</script>
+
+</html>

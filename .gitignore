@@ -1,0 +1,10 @@
+__pycache__
+**/__pycache__
+repl.py
+*.pyc
+*.c
+*.o
+*.pdf
+.vscode/
+.python-version
+**/storage
